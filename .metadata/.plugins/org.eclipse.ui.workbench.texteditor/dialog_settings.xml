@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="puneet" key="selection"/>
+		<item value="true" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="classpath.best"/>
+			<item value="classpath.test"/>
+			<item value="style"/>
+			<item value=" Reporter.log"/>
+			<item value="//&#x09;&#x09;File HrefFile = new File(Path_HREFFile);"/>
+			<item value="sTempHREF"/>
+			<item value="\n"/>
+			<item value="Href"/>
+		</list>
+		<list key="replacehistory">
+			<item value="puneet"/>
+			<item value="classpath.best"/>
+			<item value="ReportExtn.Pass"/>
+			<item value="sTempSTR"/>
+			<item value="\r\n"/>
+			<item value="Href_LandingPage"/>
+			<item value="&quot;Grp_Navigation&quot;"/>
+			<item value="Grp_Navigation"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="257" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="380" key="DIALOG_HEIGHT"/>
+		<item value="977" key="DIALOG_X_ORIGIN"/>
+		<item value="131" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

@@ -1,0 +1,58 @@
+package commonfunctions;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver.Timeouts;
+import org.openqa.selenium.WebElement;
+
+
+public class UserExtension {
+	
+	public static void FindAllLinks(WebDriver driver){
+		
+		java.util.List<WebElement> links = driver.findElements(By.tagName("a"));
+		System.out.println(links.size());
+		for(int i=0; i<=links.size();i++)
+		{
+			System.out.println(links.get(i).getText());
+			System.out.println(links.get(i).getAttribute("href"));
+			
+		}
+		
+		}
+	public static boolean IsElementPresent(WebDriver driver, By by)
+	{
+		
+		boolean present = driver.findElements(by).size() != 0;
+		return present;
+		
+	}
+	public static boolean IsElementPresent(WebDriver driver, By by,   int seconds)
+	{
+		boolean present = driver.findElements(by).size() != 0;
+		int i = 0;
+		do
+		{
+			present = driver.findElements(by).size() != 0;
+			i++;
+		}while(present == false || i <= seconds);
+				
+		return present;
+		
+	} 
+	
+	public static void SafeClick(WebDriver driver, By by)
+	{
+		try
+		{
+			driver.findElement(by).click();
+		}
+		catch(Exception e)
+		{
+			ReportExtn.Fail("Element Not found. " + e.getStackTrace());
+		}
+		
+	}
+	
+	
+}
+

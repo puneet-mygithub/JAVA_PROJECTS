@@ -1,0 +1,16 @@
+package commonfunctions;
+
+import java.util.Date;
+
+import org.testng.Reporter;
+
+public class ReportExtn {
+
+	public currDate Date = new Date();
+	public static void Pass(String msg)
+	{
+		Reporter.log("Pass: " + msg);
+		
+	}
+	
+}

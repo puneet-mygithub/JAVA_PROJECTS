@@ -1,0 +1,10 @@
+package commonfunctions;
+
+public class ReportExtn {
+
+	public static void Pass(String msg)
+	{
+		
+	}
+	
+}

@@ -1,0 +1,88 @@
+package KuPortal;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+import org.testng.Reporter;
+import org.testng.annotations.AfterGroups;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeGroups;
+import org.testng.annotations.Test;
+import org.testng.Assert;
+
+import commonfunctions.UserExtension;
+
+import UIMapKuPortal.HomePage;
+import UIMapKuPortal.LandingPage;
+
+
+import java.util.Properties;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class Test_HomePage {
+
+public WebDriver driver = new FirefoxDriver();
+
+
+@BeforeClass
+public void LoginToKuPortal(){
+
+	driver.get(EnvironmentVariables.sUrl_StudentPortal);
+	LandingPage.LoginToKuPortal(driver, UIMapKuPortalHome.getProperty("UserName"), UIMapKuPortalHome.getProperty("Password"));
+}
+
+  
+  @Test(groups = {"Grp_Navigation"})
+  	  public void CheckMyStudies() {	  
+
+	  Assert.assertTrue(UserExtension.IsElementPresent(driver, By.linkText(HomePage.linkMYSTUDIES)), "My Studies link is not present");
+	  Reporter.log("MY Studies is Present");	  
+  }
+	  @Test(groups = {"Grp_Navigation"})
+	  public void CheckHome() {	 
+		  Assert.assertTrue(UserExtension.IsElementPresent(driver, By.linkText(HomePage.linkHOME)), "linkHOME is not present");
+		  Reporter.log("linkHOME is Present");		 
+  }
+	  @Test(groups = {"Grp_Navigation"})
+	  public void CheckMyAccount() {	 
+		  Assert.assertTrue(UserExtension.IsElementPresent(driver, By.linkText(HomePage.linkMYACCOUNT)), "linkMYACCOUNT is not present");
+		  Reporter.log("linkMYACCOUNT is Present");		  
+  }
+	  @Test(groups = {"Grp_Navigation"})
+	  public void CheckMyTools() {	 
+		  Assert.assertTrue(UserExtension.IsElementPresent(driver, By.linkText(HomePage.linkMYTOOLS)), "linkMYTOOLS is not present");
+		  Reporter.log("linkMYTOOLS is Present");		  		  		  
+  }
+	  @Test(groups = {"Grp_Navigation"})
+	  public void CheckeUniversityInfo() {	 
+		  Assert.assertTrue(UserExtension.IsElementPresent(driver, By.linkText(HomePage.linkUNIVERSITYINFO)), "linkUNIVERSITYINFO is not present");
+		  Reporter.log("linkUNIVERSITYINFO is Present");			  		  
+  }
+	  @Test(groups = {"Grp_Navigation"})
+	  public void CheckUniversityCatalog() {
+		  Assert.assertTrue(UserExtension.IsElementPresent(driver, By.linkText(HomePage.linkUNIVERSITYCATALOG)), "linkUNIVERSITYCATALOG is not present");
+		  Reporter.log("linkUNIVERSITYCATALOG is Present");	
+  }
+	  @Test(groups = {"Grp_Navigation"})
+	  public void CheckCommunityCenter() {	 
+		  Assert.assertTrue(UserExtension.IsElementPresent(driver, By.linkText(HomePage.linkCOMMUNITYCENTER)), "linkCOMMUNITYCENTER is not present");
+		  Reporter.log("linkCOMMUNITYCENTER is Present");	
+  }
+	  @Test(groups = {"Grp_Navigation"})
+	  public void CheckCareerNetwork() {	 
+		  Assert.assertTrue(UserExtension.IsElementPresent(driver, By.linkText(HomePage.linkCAREERNETWORK)), "linkCAREERNETWORK is not present");
+		  Reporter.log("linkCAREERNETWORK is Present");	
+  }  
+	  @AfterGroups(groups={"Grp_Navigation"})
+	  public void CloseDown(){
+		  
+		  driver.close();
+		  driver.quit();
+		  
+		 }
+};

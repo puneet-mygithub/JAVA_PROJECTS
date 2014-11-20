@@ -1,0 +1,49 @@
+package commonfunctions;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.testng.Reporter;
+
+public class ReportExtn {
+
+	
+	
+	public static void Pass(String msg)
+	{
+		Date currDate = new Date();
+		SimpleDateFormat ft = new SimpleDateFormat ("'['yyyy.MM.dd']''['hh:mm:ss']'");	
+		
+		Reporter.log(ft.format(currDate) + "     Pass: " +  msg);
+	}
+	
+	public static void Fail(String msg)
+	{
+		Date currDate = new Date();
+		SimpleDateFormat ft = new SimpleDateFormat ("'['yyyy.MM.dd']''['hh:mm:ss']'");	
+		
+		Reporter.log(ft.format(currDate) + "     Fail: " +  msg);
+	}
+	
+	public static void Fail(String Expected, String Actual, String msg)
+	{
+		Date currDate = new Date();
+		SimpleDateFormat ft = new SimpleDateFormat ("'['yyyy.MM.dd']''['hh:mm:ss']'");	
+		
+		Reporter.log(ft.format(currDate) + "     Fail: Expected: " + Expected +  " Acutal: " + Actual + " " +  msg);
+	}
+	
+	public static void Data(String msg)
+	{
+		Date currDate = new Date();
+		SimpleDateFormat ft = new SimpleDateFormat ("'['yyyy.MM.dd']''['hh:mm:ss']'");	
+		
+		Reporter.log(ft.format(currDate) + "     Data: " +  msg);
+	}
+	
+	public static void MethodReportingLayout(String MethodName)
+	{
+		Reporter.log("=============================================="+ MethodName +"==============================================");
+	}
+	
+}

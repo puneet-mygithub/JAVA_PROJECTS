@@ -1,0 +1,17 @@
+package KuPortal;
+
+import CommonFunctions.UserExtension;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class UIMapKuPortal_LandingPage {
+	
+	public Webdriver  driver = new Webdriver();
+	UserExtension objUserExtn =  new UserExtension();
+	
+public void GetAllLinks()
+{
+	
+
+}
+}

@@ -1,0 +1,40 @@
+package KuPortal;
+
+import CommonFunctions.UserExtension;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import org.testng.annotations.Test;
+
+public class UIMapKuPortal_LandingPage {
+	
+	public WebDriver  driver = new FirefoxDriver();
+	public static String linkForgotPassword = "Forgot Password?";
+	public static String linkOutSchool = "Out of school and need to make a payment? ";
+	public static String linkAllPrograms = "All Programs";
+	public static String linkApply = "Apply";
+	public static String linkAboutKU = "About Kaplan University";
+	public static String linkTuitionFinancialAid = "Tuition and Financial Aid";
+	public static String linkMission = "Mission";
+	public static String linkPressRoom = "Press Room";
+	public static String linkContactUs = "Contact Us";
+	public static String linkJoinFaculty = "Join Our Faculty";
+	public static String linkBusiness = "Business";
+	public static String linkEduction = "Education";
+	public static String linkHealthSci = "Health Sciences";
+	public static String linkInformationTech = "Information Technology";
+	public static String linkNursing = "Nursing";
+	public static String link = "Professional and Continuing Education";
+	public static String link = "Social and Behavioral Sciences";
+	public static String link = "TTY";
+	public static String link = "Request Information";
+	
+	
+	
+@Test
+public void GetAllLinks()
+{
+	driver.get("http://kup.test.int.kaplan.com");
+	UserExtension.FindAllLinks(driver);
+}
+}

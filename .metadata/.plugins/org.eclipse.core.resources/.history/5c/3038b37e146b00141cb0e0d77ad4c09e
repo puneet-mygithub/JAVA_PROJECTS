@@ -1,0 +1,20 @@
+package KuPortal;
+
+import CommonFunctions.UserExtension;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import org.testng.*;
+import org.testng.annotations.Test;
+
+public class UIMapKuPortal_LandingPage {
+	
+	public WebDriver  driver = new FirefoxDriver();
+	
+@Test
+public void GetAllLinks()
+{
+	driver.get("http://kup.test.int.kaplan.com");
+	UserExtension.FindAllLinks(driver);
+}
+}

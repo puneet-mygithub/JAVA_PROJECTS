@@ -1,0 +1,12 @@
+package KuPortal;
+
+import CommonFunctions.UserExtension;
+
+public class UIMapKuPortal_LandingPage {
+	
+	
+	UserExtension objUserExtn =  new UserExtension();
+	
+public void GetAllLinks();
+
+}

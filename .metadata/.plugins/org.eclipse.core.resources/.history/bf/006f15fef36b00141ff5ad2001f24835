@@ -1,0 +1,13 @@
+package commonfunctions;
+
+import org.testng.Reporter;
+
+public class ReportExtn {
+
+	public static void Pass(String msg)
+	{
+		Reporter.log("Pass: " + msg);
+		
+	}
+	
+}

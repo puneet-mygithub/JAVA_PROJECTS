@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="row"/>\r\n<expression enabled\="true" text\="cell"/>\r\n<expression enabled\="true" text\="val"/>\r\n<expression enabled\="true" text\="iRow"/>\r\n<expression enabled\="true" text\="iCell"/>\r\n<expression enabled\="true" text\="sCellValue"/>\r\n</watchExpressions>\r\n

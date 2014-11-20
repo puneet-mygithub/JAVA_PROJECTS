@@ -1,0 +1,20 @@
+package commonfunctions;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.testng.Reporter;
+
+public class ReportExtn {
+
+	
+	
+	public static void Pass(String msg)
+	{
+		public Date currDate = new Date();
+		public SimpleDateFormat ft = new SimpleDateFormat ("'['yyyy.MM.dd']''['hh:mm:ss']'");	
+		
+		Reporter.log(ft.format(currDate) + "     Pass: " +  msg);
+	}
+	
+}

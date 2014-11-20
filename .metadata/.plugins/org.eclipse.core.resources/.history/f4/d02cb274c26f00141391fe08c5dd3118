@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="KUPortal_Navigation">
+<parameter name="Environment" value="TEST"/>
+   <test name="KUPortal_TopNavigation">
+   
+    <classes>
+      <class name="KuPortal.Test_LandingPage" />
+    </classes>
+  </test>
+</suite>

@@ -1,0 +1,30 @@
+package commonfunctions;
+
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+
+public class ExcelReader {
+	
+	public static String ReadExcelFile(HSSFSheet worksheet, int iRow, int iCell)
+	{
+		String val = null;
+		HSSFRow row = worksheet.getRow(row);
+		HSSFCell cellA1 = row1.getCell(0);
+		String a1Val = cellA1.getStringCellValue();
+		HSSFCell cellB1 = row1.getCell(1);
+		String b1Val = cellB1.getStringCellValue();
+		return val;
+		
+		
+	}
+	
+	
+
+}
