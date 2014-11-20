@@ -11,7 +11,7 @@
    <property name="testoutdir" location="test-output" />   
    <property name="full-compile" value="true" />
    <path id="classpath.base"/>
-   <path id="puneet">
+   <path id="piyush">
        <fileset dir="${libdir}">
          <include name="**/*.jar" />
       </fileset>
@@ -35,11 +35,11 @@
    <target name="compile" depends="clean">
       <javac srcdir="${srcdir}" destdir="${testdir}" 
          verbose="${full-compile}">
-         <classpath refid="puneet"/>
+         <classpath refid="piyush"/>
       </javac>
    </target>
    <target name="TopNavigation" depends="compile">
-	<testng outputdir="${testoutdir}" classpathref="puneet"> 
+	<testng outputdir="${testoutdir}" classpathref="piyush"> 
       <xmlfileset dir="${basedir}" includes="testng.xml"/> 	
     </testng>   
    </target>
